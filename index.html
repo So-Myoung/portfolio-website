@@ -7,8 +7,65 @@
     <title>SoMyoung's Portfolio</title>
     <meta name="description" content="Portfolio for software engineer SoMyoung">
     <meta name="author" content="SoMyoung">
+    <link rel="icon" type="imgs/png" href="imgs/favicon.png"/>
+    <!-- //웹 제목 옆에 아이콘 favicon이 표시됨 -->
+    <script src="https://kit.fontawesome.com/a192581c93.js" crossorigin="anonymous"></script>
+    <!-- fontawesome 사이트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- 가지고 올 폰트 링크 -->
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <!-- defer기능 유용, 추가할 것 -->
+    <!-- div[data-display-name='dream']{
+        background-color = beige;
+        } 
+    -> data- 로 이름을 붙이면 data-에 해당되는 것에 접근할 수 있음.
+    div[]면 div, span[]이면 span에 해당되는 것만 가져오니까 유용함
+    -->
 </head>
 <body>
-    
+    <!-- 
+        <div data-index="1" data-display-name="dream"></div>
+        <div data-index="2" data-display-name="coding"></div>
+        <span data-index="1" data-display-name="dream">text</span>
+        <script>
+            const dream = document.querySelector('div[data-display-name="dream"]') -> '' 두개 나올 수 없으므로 'dream'을 "dream"으로 변경
+            console.log(dream.dataset);
+            console.log(dream.displayName);
+            console.log(dream.dataset.index);
+            but 내가 설정한 정보가 헤커가 html 파일을 봤을 때 그대로 보이므로 보안을 지켜야 한다면 암호화해서 자바스크립트 안에 보관
+        </script> -->
+        
+        <!-- Navbar -->
+        <nav id="navbar"></nav>
+            <div class="navbar__logo">
+                <i class="fa-solid fa-moon"></i>
+                <a href="#">SoMyoung</a>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__menu__item">Home</li>
+                <li class="navbar__menu__item">About</li>
+                <li class="navbar__menu__item">Skills</li>
+                <li class="navbar__menu__item">My work</li>
+                <li class="navbar__menu__item">Testimonial</li>
+                <li class="navbar__menu__item">Contact</li>
+            </ul>
+            <div class="navbar__menu"></div>
+        <!-- About -->
+        <section id="about"></section>
+        <!-- Skills -->
+        <section id="skills"></section>
+        <!-- Work -->
+        <section id="work"></section>
+        <!-- Testimonials -->
+        <section id="testimonials"></section>
+        <!-- Contact -->
+        <section id="contact"></section>
 </body>
 </html>
+
+<!-- BEM 작성법: 
+    .cards
+    .card__title--pink
+    .button
+https://nykim.work/15 -> BEM 부가 설명 사이트 -->

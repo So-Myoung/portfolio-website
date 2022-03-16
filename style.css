@@ -1,0 +1,11 @@
+/* root{} 안에 --background-color나 --font-size, --base-space 등 설정해두고, (root는 최상위 부모노드)
+자식노드에서 접근 시 var(--background-color)로 접근
++) calc(var(--base-space) *2); */
+/* @media screen and (max-width: 768px) {
+    :root{
+        ~
+    }
+} - 모바일에서는 색상이 다르게 보이게 함*/
+/* CSS기능 더 공부할 때 -> https://developer.mozilla.org/en-US/docs/Web/CSS 참고 */
+
+/* font-family: 'Open Sans', sans-serif; */
