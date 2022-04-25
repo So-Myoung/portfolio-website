@@ -174,9 +174,14 @@ h3 {
 .section {
   padding: 50px;
   text-align: center;
-  max-width: 1200px; /* 이거 설정 안하면 늘어나면서 배열되는 아이콘 사이 간격이 너무 멀어짐 웹사이트 예쁘게 보이려면 필수 */
   margin: auto; /* margin이 한쪽에만 몰려있을 때 auto를 쓰면 자동으로 양옆으로 정렬된다. */
 }
+
+.section__container {
+  max-width: 1200px; /* 이거 설정 안하면 늘어나면서 배열되는 아이콘 사이 간격이 너무 멀어짐 웹사이트 예쁘게 보이려면 필수 */
+  margin: auto;
+}
+
 
 /* About */
 .about__majors {
@@ -245,4 +250,23 @@ h3 {
 
 .job__period {
   font-size: var(--font-micro);
+}
+
+/* Skills */
+
+#skills {
+  background-color: var(--color-yellow);
+}
+
+.skillset {
+  display: flex;
+  background-color: var(--color-light-grey);
+}
+
+.skillset__left {
+  flex-basis:60%;
+}
+
+.skillset__right {
+  flex-basis:40%;
 }
