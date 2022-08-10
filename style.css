@@ -311,3 +311,115 @@ h3 {
 
 /* Work */
 
+.work__categories {
+  margin: 40px;
+}
+
+.category__btn {
+  border: 1px solid var(--color-dark-white);
+  /* solid - 단선 */
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-regular);
+  padding: 8px 48px;
+}
+
+.category__btn.active,
+.category__btn:hover {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  /* 글씨색 color 설정 */
+}
+
+.category__btn.active .category__count,
+.category__btn:hover .category__count{
+  opacity: 1;
+  top: 0;
+}
+
+
+.category__count {
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  color: var(--color-white);
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block;
+  /* inline 엘리먼트처럼 전후 줄바꿈 없이 한 줄에 다른 엘리먼트들과 나란히 배치되지만, block 엘리먼트처럼 width와 height 속성 지정 및 margin과 padding 속성의 상하 간격 지정이 가능 */
+  position: relative;
+  /* https://www.zerocho.com/category/CSS/post/5864f3b59f1dc000182d3ea1 참조.
+     태그의 위치를 변경하고 싶을 때 사용 */
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  /* opacity -> 투명도 */
+  transition: all var(--animation-duration) ease-in;  
+}
+
+.work__projects {
+  display: flex;
+  flex-wrap: wrap;
+  /* 줄바꿈, 매핑 */
+  justify-content: center;
+}
+
+.project {
+  position: relative;
+  /* defalut값 static */
+  dispaly: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 250px;
+  margin: 2px;
+  background-color: var(--color-light-white);
+}
+
+.project__img {
+  max-width: 100%;
+  max-height: 100%;
+  align-self: center;
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/align-self
+  설명 참고 items -> 모든 아이템들이 정렬, self -> 그 개체 혼자만 정렬
+  stretch, center, start, end */
+}
+
+.project__description {
+  position: absolute;
+  /* static을 쓰지 않는 부모를 찾아감 */
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  /* opacity -> 투명도 */
+  transform: translateY(10px);
+  transition: all var(--animation-duration) ease-in;
+}
+
+.project:hover .project__description{
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+
+.project__description h3{
+  color: var(--color-white);
+}
+
+.project__description h3:after {
+/*  태그나 클래스 뒤에 콜론과 함께 after 선택자를 지정하고 내부에 속성은 content 를 사용 
+content 에 입력한 텍스트는 컨테이너 요소 안 맨 마지막에 추가 */
+content: '';
+display: block;
+position: relative;
+left: 50%;
+width: 25px;
+height: 2px;
+margin-left: -12px;
+margin-top: 8px;
+background-color: var(--color-dark-white);
+}
