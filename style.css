@@ -94,13 +94,6 @@ h3 {
   margin: 8px 0;
 }
 
-h3 {
-  font-size: var(--font-regular);
-  font-weight: var(--font-regular);
-  color: var(--color-black);
-  margin: 4px 0;
-}
-
 /* Navbar */
 #navbar {
   display: flex;
@@ -422,4 +415,84 @@ height: 2px;
 margin-left: -12px;
 margin-top: 8px;
 background-color: var(--color-dark-white);
+}
+
+/* Testimonials */
+
+#testimonials {
+  background-color: var(--color-light-white);
+}
+/* id - # */
+
+.testimonials {
+  margin: 40px;
+}
+/* class - . */
+
+.testimonial {
+  display: flex;
+  margin: 32px 0;
+}
+
+
+.testimonial__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; 
+}
+
+.testimonial__avatar:nth-child(odd) {
+  margin-right: 40px;
+}
+
+.testimonial__avatar:nth-child(even) {
+  margin-left: 40px;
+}
+
+.testimonial__speech-bubble {
+  padding: 18px;
+  background-color: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.testimonial__speech-bubble p {
+  color: var(--color-light-grey);
+}
+
+.testimonial__speech-bubble a {
+  color: var(--color-pink);
+}
+
+.name a {
+  font-weight: var(--weight-semi-bold);
+}
+
+/* Contact */
+#contact {
+  background-color: var(--color-pink);
+}
+
+.contact__title,
+.contact__email,
+.contact__rights {
+  color: var(--color-white);
+}
+
+.contact__title {
+  margin: 32px 0;
+}
+
+.contact__links {
+  font-size: var(--font-large);
+  margin:24px 0;
+  transition: all var(--animation-duration) ease-in;
+  /* ease : 기본값으로, 전환(transition) 효과가 천천히 시작되어, 그다음에는 빨라지고, 마지막에는 다시 느려집니다.
+ease-in : 전환(transition) 효과가 천천히 시작됩니다.
+ease-out : 전환(transition) 효과가 천천히 끝납니다.
+ease-in-out : 전환(transition) 효과가 천천히 시작되어, 천천히 끝납니다. */
+}
+
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-dark-pink);
 }
