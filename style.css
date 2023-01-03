@@ -16,9 +16,9 @@
   --color-dark-white: #bdbdbd;
   --color-pink: #fe918d;
   --color-dark-pink: #ff6863;
-  --color-grey: #616161;
-  --color-light-grey: #7c7979;
-  --color-dark-grey: #4d4d4d;
+  --color-gray: #616161;
+  --color-light-gray: #7c7979;
+  --color-dark-gray: #4d4d4d;
   --color-blue: #73aace;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
@@ -96,12 +96,21 @@ h3 {
 
 /* Navbar */
 #navbar {
+  position: fixed;
   display: flex;
   justify-content: space-between; /*박스들이 양옆에 쏠리면서 가운데에 빈공간이 생김*/
-  background-color: var(--color-pink);
+  background-color: transparent;
   align-items: center; /*수직에서 중간정렬*/
   color: var(--color-white);
   padding: 16px;
+  width: 100%;
+  transition: all var(--animation-duration) ease-in-out; /* navbar--dark로 변환 시 천천히 변환 */
+  z-index: 1;
+}
+
+#navbar.navbar--dark{
+  background-color: var(--color-dark-pink);
+  padding: 8px;
 }
 
 .navbar__menu {
@@ -142,6 +151,7 @@ h3 {
 #home {
   background: url("imgs/home-background.png") center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
@@ -168,9 +178,9 @@ h3 {
 }
 
 /* Section common */
-/* . -> 클래스
-     -> 태그 
-  #  -> 아이디  */
+/* .  -> 클래스
+      -> 태그 
+  #   -> 아이디  */
 
 /* Section common */
 .section {
@@ -219,7 +229,7 @@ h3 {
 
 .major__title,
 .major__description {
-  color: var(--color-dark-grey);
+  color: var(--color-dark-gray);
 }
 
 .major__description {
@@ -243,7 +253,7 @@ h3 {
 
 .job__name,
 .job__period {
-  color: var(--color-light-grey);
+  color: var(--color-light-gray);
 }
 
 .job__name {
@@ -262,7 +272,7 @@ h3 {
 
 .skillset {
   display: flex;
-  background-color: var(--color-light-grey);
+  background-color: var(--color-light-gray);
   color: var(--color-light-white);
   margin: 20px 0;
 }
@@ -273,7 +283,7 @@ h3 {
 
 .skillset__left {
   flex-basis: 60%;
-  background-color: var(--color-dark-grey);
+  background-color: var(--color-dark-gray);
   padding: 20px 40px;
 }
 
@@ -289,7 +299,7 @@ h3 {
 .skill__bar{
   width: 100%;
   height: 3px;
-  background-color: var(--color-grey);
+  background-color: var(--color-gray);
 }
 
 .skill__value {
@@ -303,7 +313,7 @@ h3 {
 }
 
 .tools {
-  background-color: var(--color-grey);
+  background-color: var(--color-gray);
 }
 
 .tools,
@@ -368,7 +378,7 @@ h3 {
 .project {
   position: relative;
   /* defalut값 static */
-  dispaly: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 280px;
@@ -465,7 +475,7 @@ background-color: var(--color-dark-white);
 }
 
 .testimonial__speech-bubble p {
-  color: var(--color-light-grey);
+  color: var(--color-light-gray);
 }
 
 .testimonial__speech-bubble a {
