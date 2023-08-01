@@ -115,6 +115,7 @@ h3 {
 
 .navbar__menu {
   display: flex;
+  gap: 4px;
 }
 
 .navbar__logo {
@@ -124,25 +125,25 @@ h3 {
 }
 
 .navbar__menu__item {
-  padding: 8px 12px;
-  margin: 0 4px;
-  cursor: pointer;
-  border-radius: var(--size-border-radius);
+  display: block;
+  padding: 8px 16px;
 }
 
 .navbar__menu__item.active {
   border: 1px solid var(--color-white);
+  border-radius: 4px;
 }
 
 .navbar__menu__item:hover {
+  border-bottom: 1px solid var(color-white);
   background-color: var(--color-dark-pink);
 }
 
 .navbar__toggle-btn{
   position: absolute;
-  top: 24px;
-  right: 32px;
-  font-size: 24px;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
   color: var(--color-white);
   display: none;
 }
@@ -342,6 +343,18 @@ h3 {
   /* 글씨색 color 설정 */
 }
 
+.selected {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}
+
+.selected .category__count,
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0;
+}
+
+
 .category__btn.active .category__count,
 .category__btn:hover .category__count{
   opacity: 1;
@@ -373,6 +386,12 @@ h3 {
   flex-wrap: wrap;
   /* 줄바꿈, 매핑 */
   justify-content: center;
+  transition: all 250ms ease-out;
+}
+
+.work__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(20px);
 }
 
 .project {
@@ -516,8 +535,32 @@ ease-in-out : 전환(transition) 효과가 천천히 시작되어, 천천히 끝
   color: var(--color-dark-pink);
 }
 
+/* Arrow up */
+.arrow-up {
+  background-color: var(--color-dark-pink);
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  font-size: 3rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 100%;
+  text-align: center;
+  box-shadow: 5px 5px 0px 0px var(--color-pink);
+  transition: opacity 300ms ease-in;
+}
+
 /* For below 768px screen width */
 @media screen and (max-width: 768px){
+  .section{
+    padding: 4rem 2rem;
+  }
+
+  .home__title, .major__title, .contact__title, .skillset__title{
+    font-size: 2rem;
+  }
+  
+
   .navbar__toggle-btn {
     display:block;
   }
@@ -526,6 +569,7 @@ ease-in-out : 전환(transition) 효과가 천천히 시작되어, 천천히 끝
     flex-direction: column;
   /* item 세로로 진열 */
     align-items: flex-start;
+    background-color: var(--color-dark-pink);
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
   */
   }
@@ -534,10 +578,26 @@ ease-in-out : 전환(transition) 효과가 천천히 시작되어, 천천히 끝
     flex-direction: column;
     text-align: center;
     width: 100%;
+    height: 70%;
+    display: none;
+  }
+  
+  .navbar__menu.open {
+    display: flex;
+  }
+
+  #home {
+    padding-bottom: 3rem;
+  }
+
+  .home__title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .about__majors {
     flex-direction: column;
+    align-items: center;
   }
 
   .major {
@@ -552,10 +612,39 @@ ease-in-out : 전환(transition) 효과가 천천히 시작되어, 천천히 끝
     flex-grow: 1;
   }
 
-/*
-  .testimonial__avatar{
-    width: 80px;
-    height: 80px;
+  .job {
+    justify-content: center;
   }
-*/
+
+  .skills {
+    grid-template-columns: 1fr;
+  }
+
+  .categories {
+    flex-direction: column;
+  }
+
+  .category {
+    width: 100%;
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+.testimonial {
+  flex-direction: column;
+}
+
+.testimonial:nth-child(even) .testimonial__avatar {
+  order: 0;
+}
+
+.arrow-up {
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  bottom: 1.5rem;
+  right: 1.5rem;
+}
 }

@@ -14,7 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- 가지고 올 폰트 링크 -->
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/projects.js" defer></script>
     <!-- defer기능 유용, 추가할 것 -->
     <!-- div[data-display-name='dream']{
         background-color = beige;
@@ -249,22 +250,21 @@
                 <h1>My Work</h1>
                 <h3>Projects</h3>
                 <div class="work__categories">
-                    <button class="category__btn active">
+                    <button class="category__btn selected" data-filter="all">
                         All<span class="category__count">8</span>
                     </button>
-                    <button class="category__btn">
+                    <button class="category__btn" data-filter="front-end">
                         Front-end<span class="category__count">3</span>
                     </button>
-                    <button class="category__btn">
+                    <button class="category__btn" data-filter="back-end">
                         Back-end<span class="category__count">3</span>
                     </button>
-                    <button class="category__btn">
+                    <button class="category__btn" data-filter="mobile">
                         Mobile<span class="category__count">2</span>
                     </button>
                 </div>
-    
                 <div class="work__projects">
-                <!-- Front-end -->
+                <!-- front-end -->
                     <a
                     class="project"
                     data-type="front-end"
@@ -314,10 +314,10 @@
                     </div>
                     </a>
     
-                    <!-- Back-end -->
+                    <!-- back-end -->
                     <a
                     class="project"
-                    data-type="Back-end"
+                    data-type="back-end"
                     href="https://github.com/So-Myoung?tab=repositories"
                     target="blank"
                     >
@@ -333,7 +333,7 @@
                     </a>
                     <a
                     class="project"
-                    data-type="Back-end"
+                    data-type="back-end"
                     href="https://github.com/So-Myoung?tab=repositories"
                     target="blank"
                     >
@@ -349,7 +349,7 @@
                     </a>
                     <a
                     class="project"
-                    data-type="Back-end"
+                    data-type="back-end"
                     href="https://github.com/So-Myoung?tab=repositories"
                     target="blank"
                     >
@@ -364,10 +364,10 @@
                     </div>
                     </a>
     
-                    <!-- Mobile -->
+                    <!-- mobile -->
                     <a
                     class="project"
-                    data-type="Mobile"
+                    data-type="mobile"
                     href="https://github.com/So-Myoung?tab=repositories"
                     target="blank"
                     >
@@ -383,7 +383,7 @@
                     </a>
                     <a
                     class="project"
-                    data-type="Mobile"
+                    data-type="mobile"
                     href="https://github.com/So-Myoung?tab=repositories"
                     target="blank"
                     >
@@ -460,6 +460,11 @@
                 SoMyoung - All rights reserved
             </p>
         </section>
+
+        <!-- Arrow up -->
+        <button class="arrow-up">
+            <i class="fas fa-arrow-up"></i>
+        </button>
 </body>
 </html>
 
