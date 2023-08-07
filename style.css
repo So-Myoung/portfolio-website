@@ -189,7 +189,7 @@ h3 {
 
 /* Section common */
 .section {
-  padding: 50px;
+  padding: 100px 50px;
   text-align: center;
   margin: auto; /* margin이 한쪽에만 몰려있을 때 auto를 쓰면 자동으로 양옆으로 정렬된다. */
 }
