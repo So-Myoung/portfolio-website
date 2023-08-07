@@ -49,6 +49,10 @@
   box-sizing: border-box; /* Parent container에 Child container가 딱 맞게 들어감 */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
