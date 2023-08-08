@@ -14,15 +14,17 @@
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
-  --color-pink: #fe918d;
-  --color-dark-pink: #ff6863;
+  --color-pink: #E5C1C5;
   --color-gray: #616161;
   --color-light-gray: #7c7979;
   --color-dark-gray: #4d4d4d;
+  --color-dark-blue: #333D79;
   --color-blue: #73aace;
-  --color-yellow: #fff7d1;
-  --color-orange: #feb546;
+  --color-yellow: #f2EEE5;
+  --color-orange: #FEB78D;
   --color-black: #000000;
+  --color-home-banner: linear-gradient(167deg, rgba(227,171,182,1) 0%, rgba(237,229,240,1) 32%);
+  --color-dark-navbar: #eedfe2;
 
   /* Font size */
   --font-large: 48px;
@@ -105,7 +107,7 @@ h3 {
   justify-content: space-between; /*박스들이 양옆에 쏠리면서 가운데에 빈공간이 생김*/
   background-color: transparent;
   align-items: center; /*수직에서 중간정렬*/
-  color: var(--color-white);
+  color: var(--color-dark-blue);
   padding: 16px;
   width: 100%;
   transition: all var(--animation-duration) ease-in-out; /* navbar--dark로 변환 시 천천히 변환 */
@@ -113,7 +115,7 @@ h3 {
 }
 
 #navbar.navbar--dark{
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-dark-navbar);
   padding: 8px;
 }
 
@@ -125,7 +127,13 @@ h3 {
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
-  color: var(--color-white);
+  color: #EBD990;
+}
+
+.navbar__logo--text {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-dark-blue);
 }
 
 .navbar__menu__item {
@@ -134,13 +142,13 @@ h3 {
 }
 
 .navbar__menu__item.active {
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-dark-blue);
   border-radius: 4px;
 }
 
 .navbar__menu__item:hover {
   border-bottom: 1px solid var(color-white);
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-dark-navbar);
 }
 
 .navbar__toggle-btn{
@@ -154,31 +162,33 @@ h3 {
 
 /* Home */
 #home {
-  background: url("imgs/home-background.png") center/cover no-repeat;
-  padding: 40px;
+  background: var(--color-home-banner); 
+  /* url("imgs/home-background.png") center/cover no-repeat; */
+  padding: 60px;
   padding-top: 120px;
   text-align: center;
 }
 
 .home__avatar {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 320px;
   border-radius: 50%; /* border-radius가 50%면 사각형 -> 원 형태로 변함 */
   border: 2px solid var(--color-light-white);
 }
 
 .home__title,
+.home__title--name,
 .home__description {
-  color: var(--color-white);
+  color: var(--color-dark-blue);
 }
 
 .home__contact {
-  color: var(--color-white);
+  color: var(--color-dark-blue);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
   margin: 24px;
   padding: 8px 12px;
-  border: 2px solid var(--color-white);
+  border: 2px solid var(--color-dark-blue);
   border-radius: var(--size-border-radius);
 }
 
@@ -524,6 +534,11 @@ background-color: var(--color-dark-white);
   margin: 32px 0;
 }
 
+.contact__links--link1,
+.contact__links--link2{
+  color: var(--color-white);
+}
+
 .contact__links {
   font-size: var(--font-large);
   margin:24px 0;
@@ -536,12 +551,12 @@ ease-in-out : 전환(transition) 효과가 천천히 시작되어, 천천히 끝
 
 .contact__links i:hover {
   transform: scale(1.1);
-  color: var(--color-dark-pink);
+  color: var(--color-dark-navbar);
 }
 
 /* Arrow up */
 .arrow-up {
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-dark-navbar);
   position: fixed;
   bottom: 3rem;
   right: 3rem;
@@ -560,7 +575,7 @@ ease-in-out : 전환(transition) 효과가 천천히 시작되어, 천천히 끝
     padding: 4rem 2rem;
   }
 
-  .home__title, .major__title, .contact__title, .skillset__title{
+  .home__title, .home__title--name, .major__title, .contact__title, .skillset__title{
     font-size: 2rem;
   }
   
@@ -573,7 +588,7 @@ ease-in-out : 전환(transition) 효과가 천천히 시작되어, 천천히 끝
     flex-direction: column;
   /* item 세로로 진열 */
     align-items: flex-start;
-    background-color: var(--color-dark-pink);
+    background-color: var(--color-dark-navbar);
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
   */
   }
@@ -594,7 +609,7 @@ ease-in-out : 전환(transition) 효과가 천천히 시작되어, 천천히 끝
     padding-bottom: 3rem;
   }
 
-  .home__title {
+  .home__title, .home__title--name {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
   }
