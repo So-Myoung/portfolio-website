@@ -164,14 +164,14 @@ h3 {
 #home {
   background: var(--color-home-banner); 
   /* url("imgs/home-background.png") center/cover no-repeat; */
-  padding: 60px;
+  padding: 40px;
   padding-top: 120px;
   text-align: center;
 }
 
 .home__avatar {
-  width: 300px;
-  height: 320px;
+  width: 280px;
+  height: 290px;
   border-radius: 50%; /* border-radius가 50%면 사각형 -> 원 형태로 변함 */
   border: 2px solid var(--color-light-white);
 }
