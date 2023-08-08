@@ -23,7 +23,7 @@
   --color-yellow: #f2EEE5;
   --color-orange: #FEB78D;
   --color-black: #000000;
-  --color-home-banner: linear-gradient(167deg, rgba(227,171,182,1) 0%, rgba(237,229,240,1) 32%);
+  --color-home-banner: linear-gradient(167deg, rgba(227, 171, 182, 1) 0%, rgba(237, 229, 240, 1) 32%);
   --color-dark-navbar: #eedfe2;
 
   /* Font size */
@@ -42,13 +42,15 @@
   --size-border-radius: 4px;
 
   /* Animation */
-  --animation-duration: 300ms; /* 애니메이션 효과를 줄때 1s는 너무 길기 때문에 보통 300ms 준다. 이 속도가 제일 예쁘게 변화하기 때문! */
+  --animation-duration: 300ms;
+  /* 애니메이션 효과를 줄때 1s는 너무 길기 때문에 보통 300ms 준다. 이 속도가 제일 예쁘게 변화하기 때문! */
 }
 
 /* Universal tags */
 * {
   /* * = 전체를 선택한다는 의미 */
-  box-sizing: border-box; /* Parent container에 Child container가 딱 맞게 들어감 */
+  box-sizing: border-box;
+  /* Parent container에 Child container가 딱 맞게 들어감 */
 }
 
 html {
@@ -83,7 +85,8 @@ h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-black);
-  margin: 16px 0px; /* 위아래폭 왼쪽오른쪽폭 */
+  margin: 16px 0px;
+  /* 위아래폭 왼쪽오른쪽폭 */
 }
 
 h2 {
@@ -104,17 +107,20 @@ h3 {
 #navbar {
   position: fixed;
   display: flex;
-  justify-content: space-between; /*박스들이 양옆에 쏠리면서 가운데에 빈공간이 생김*/
+  justify-content: space-between;
+  /*박스들이 양옆에 쏠리면서 가운데에 빈공간이 생김*/
   background-color: transparent;
-  align-items: center; /*수직에서 중간정렬*/
+  align-items: center;
+  /*수직에서 중간정렬*/
   color: var(--color-dark-blue);
   padding: 16px;
   width: 100%;
-  transition: all var(--animation-duration) ease-in-out; /* navbar--dark로 변환 시 천천히 변환 */
+  transition: all var(--animation-duration) ease-in-out;
+  /* navbar--dark로 변환 시 천천히 변환 */
   z-index: 1;
 }
 
-#navbar.navbar--dark{
+#navbar.navbar--dark {
   background-color: var(--color-dark-navbar);
   padding: 8px;
 }
@@ -151,7 +157,7 @@ h3 {
   background-color: var(--color-dark-navbar);
 }
 
-.navbar__toggle-btn{
+.navbar__toggle-btn {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -162,7 +168,7 @@ h3 {
 
 /* Home */
 #home {
-  background: var(--color-home-banner); 
+  background: var(--color-home-banner);
   /* url("imgs/home-background.png") center/cover no-repeat; */
   padding: 40px;
   padding-top: 120px;
@@ -172,7 +178,8 @@ h3 {
 .home__avatar {
   width: 280px;
   height: 290px;
-  border-radius: 50%; /* border-radius가 50%면 사각형 -> 원 형태로 변함 */
+  border-radius: 50%;
+  /* border-radius가 50%면 사각형 -> 원 형태로 변함 */
   border: 2px solid var(--color-light-white);
 }
 
@@ -201,11 +208,13 @@ h3 {
 .section {
   padding: 100px 50px;
   text-align: center;
-  margin: auto; /* margin이 한쪽에만 몰려있을 때 auto를 쓰면 자동으로 양옆으로 정렬된다. */
+  margin: auto;
+  /* margin이 한쪽에만 몰려있을 때 auto를 쓰면 자동으로 양옆으로 정렬된다. */
 }
 
 .section__container {
-  max-width: 1200px; /* 이거 설정 안하면 늘어나면서 배열되는 아이콘 사이 간격이 너무 멀어짐 웹사이트 예쁘게 보이려면 필수 */
+  max-width: 1200px;
+  /* 이거 설정 안하면 늘어나면서 배열되는 아이콘 사이 간격이 너무 멀어짐 웹사이트 예쁘게 보이려면 필수 */
   margin: auto;
 }
 
@@ -221,9 +230,11 @@ h3 {
   width: 170px;
   height: 170px;
   line-height: 170px;
-  font-size: 70px; /* i태그로 불러온 아이콘을 키우려면 font-size를 키우면 된다. */
+  font-size: 70px;
+  /* i태그로 불러온 아이콘을 키우려면 font-size를 키우면 된다. */
   margin: auto;
-  color: var(--color-blue); /* 아이콘 색 변경 */
+  color: var(--color-blue);
+  /* 아이콘 색 변경 */
   border: 1px solid var(--color-blue);
   border-radius: 50%;
   margin-bottom: 16px;
@@ -306,12 +317,12 @@ h3 {
   margin-bottom: 32px;
 }
 
-.skill__description{
+.skill__description {
   display: flex;
   justify-content: space-between;
 }
 
-.skill__bar{
+.skill__bar {
   width: 100%;
   height: 3px;
   background-color: var(--color-gray);
@@ -332,7 +343,7 @@ h3 {
 }
 
 .tools,
-.etc{
+.etc {
   padding: 20px;
 }
 
@@ -370,7 +381,7 @@ h3 {
 
 
 .category__btn.active .category__count,
-.category__btn:hover .category__count{
+.category__btn:hover .category__count {
   opacity: 1;
   top: 0;
 }
@@ -392,7 +403,7 @@ h3 {
   left: 4px;
   opacity: 0;
   /* opacity -> 투명도 */
-  transition: all var(--animation-duration) ease-in;  
+  transition: all var(--animation-duration) ease-in;
 }
 
 .work__projects {
@@ -446,27 +457,27 @@ h3 {
   transition: all var(--animation-duration) ease-in;
 }
 
-.project:hover .project__description{
+.project:hover .project__description {
   opacity: 0.8;
   transform: translateY(0px);
 }
 
-.project__description h3{
+.project__description h3 {
   color: var(--color-white);
 }
 
 .project__description h3:after {
-/*  태그나 클래스 뒤에 콜론과 함께 after 선택자를 지정하고 내부에 속성은 content 를 사용 
+  /*  태그나 클래스 뒤에 콜론과 함께 after 선택자를 지정하고 내부에 속성은 content 를 사용 
 content 에 입력한 텍스트는 컨테이너 요소 안 맨 마지막에 추가 */
-content: '';
-display: block;
-position: relative;
-left: 50%;
-width: 25px;
-height: 2px;
-margin-left: -12px;
-margin-top: 8px;
-background-color: var(--color-dark-white);
+  content: '';
+  display: block;
+  position: relative;
+  left: 50%;
+  width: 25px;
+  height: 2px;
+  margin-left: -12px;
+  margin-top: 8px;
+  background-color: var(--color-dark-white);
 }
 
 /* Testimonials */
@@ -474,11 +485,13 @@ background-color: var(--color-dark-white);
 #testimonials {
   background-color: var(--color-light-white);
 }
+
 /* id - # */
 
 .testimonials {
   margin: 40px;
 }
+
 /* class - . */
 
 .testimonial {
@@ -490,7 +503,7 @@ background-color: var(--color-dark-white);
 .testimonial__avatar {
   width: 150px;
   height: 150px;
-  border-radius: 50%; 
+  border-radius: 50%;
 }
 
 .testimonial__avatar:nth-child(odd) {
@@ -535,13 +548,13 @@ background-color: var(--color-dark-white);
 }
 
 .contact__links--link1,
-.contact__links--link2{
+.contact__links--link2 {
   color: var(--color-white);
 }
 
 .contact__links {
   font-size: var(--font-large);
-  margin:24px 0;
+  margin: 24px 0;
   transition: all var(--animation-duration) ease-in;
   /* ease : 기본값으로, 전환(transition) 효과가 천천히 시작되어, 그다음에는 빨라지고, 마지막에는 다시 느려집니다.
 ease-in : 전환(transition) 효과가 천천히 시작됩니다.
@@ -570,26 +583,29 @@ ease-in-out : 전환(transition) 효과가 천천히 시작되어, 천천히 끝
 }
 
 /* For below 768px screen width */
-@media screen and (max-width: 768px){
-  .section{
+@media screen and (max-width: 768px) {
+  .section {
     padding: 4rem 2rem;
   }
 
-  .home__title, .home__title--name, .major__title, .contact__title, .skillset__title{
+  .home__title,
+  .home__title--name,
+  .major__title,
+  .contact__title,
+  .skillset__title {
     font-size: 2rem;
   }
-  
 
   .navbar__toggle-btn {
-    display:block;
+    display: block;
   }
 
   #navbar {
     flex-direction: column;
-  /* item 세로로 진열 */
+    /* item 세로로 진열 */
     align-items: flex-start;
     background-color: var(--color-dark-navbar);
-  /* https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
   */
   }
 
@@ -600,7 +616,7 @@ ease-in-out : 전환(transition) 효과가 천천히 시작되어, 천천히 끝
     height: 70%;
     display: none;
   }
-  
+
   .navbar__menu.open {
     display: flex;
   }
@@ -609,7 +625,8 @@ ease-in-out : 전환(transition) 효과가 천천히 시작되어, 천천히 끝
     padding-bottom: 3rem;
   }
 
-  .home__title, .home__title--name {
+  .home__title,
+  .home__title--name {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
   }
@@ -620,26 +637,19 @@ ease-in-out : 전환(transition) 효과가 천천히 시작되어, 천천히 끝
   }
 
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 3rem;
+    max-width: 25rem;
   }
 
-  .skillset {
-    flex-direction: column;
-  }
-
-  .project {
-    flex-grow: 1;
-  }
-
-  .job {
+  .about__jobs {
     justify-content: center;
   }
 
-  .skills {
+  .skillset {
     grid-template-columns: 1fr;
   }
 
-  .categories {
+  .work__categories {
     flex-direction: column;
   }
 
@@ -647,23 +657,23 @@ ease-in-out : 전환(transition) 효과가 천천히 시작되어, 천천히 끝
     width: 100%;
   }
 
-  .projects {
+  .work__projects {
     grid-template-columns: repeat(2, 1fr);
   }
 
-.testimonial {
-  flex-direction: column;
-}
+  .testimonials {
+    flex-direction: column;
+  }
 
-.testimonial:nth-child(even) .testimonial__avatar {
-  order: 0;
-}
+  .testimonial:nth-child(even) .testimonial__avatar {
+    order: 0;
+  }
 
-.arrow-up {
-  font-size: 2rem;
-  width: 3rem;
-  height: 3rem;
-  bottom: 1.5rem;
-  right: 1.5rem;
-}
+  .arrow-up {
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
 }
