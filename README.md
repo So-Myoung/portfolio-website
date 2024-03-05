@@ -1,3 +1,6 @@
+### HOME
+![image](https://github.com/So-Myoung/portfolio-website/assets/99127970/73e3fafc-afe9-4c4f-90b5-c18721005cf1)
+
 ### 웹 사이트 주소
 https://so-myoung.github.io/portfolio-website/
 
