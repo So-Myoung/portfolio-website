@@ -1,5 +1,3 @@
-## portfolio-website
-
 ### 웹 사이트 주소
 https://so-myoung.github.io/portfolio-website/
 
